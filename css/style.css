@@ -1,0 +1,80 @@
+header .nav-link {
+  position: relative;
+  margin: 0 15px;
+}
+
+header .nav-item .nav-link.active {
+  color: #35a22c !important;
+}
+header .nav-link::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: #35a22c;
+  transition: all 0.5s;
+}
+header .nav-link:hover::before {
+  width: 100%;
+}
+header .active::before {
+  width: 100%;
+}
+/* xử lí khi hover vào nội dung nút điều hướng sẽ đổi màu chữ  */
+header .nav-link:hover {
+  color: #35a22c !important;
+}
+.carousel .carousel-caption img {
+  width: 150px;
+  height: 150px;
+}
+.carousel .carousel-caption {
+  left: 50%;
+  top: 50%;
+  /* transform nhận giá trị âm cho 2 chiều giúp đẩy ngược phần tử lại nhằm mục đíhc căn giữa phần tử  */
+  transform: translate(-50%, -50%);
+  right: unset;
+  bottom: unset;
+}
+.project .nav-pills .nav-link.active {
+  background-color: #35a22c;
+  border-color: #35a22c;
+}
+
+.project button {
+  color: black;
+  border: 1px solid black;
+}
+
+.project .nav-link:hover {
+  color: black;
+}
+
+.project .project_item {
+  border-radius: 8px;
+  /* padding: 20px; */
+  background-color: pink;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.project .project_item img {
+  /* border-radius với 4 giá trị sẽ đi theo hướng topleft đi về tay phải  */
+  border-radius: 8px 8px 0 0;
+}
+
+.project .project_item:hover h3 {
+  color: #35a22c;
+}
+
+.project .project_text {
+  border: 1px solid transparent;
+  transition: all 0.5s;
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+}
+
+.project .project_item:hover .project_text {
+  /* border: 1px solid green; */
+  border-color: #35a22c;
+}
